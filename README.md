@@ -2,7 +2,7 @@
 
 > An App For Vue
 
-
+How To Play
 # first step
 yarn install
 
