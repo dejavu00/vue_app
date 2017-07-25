@@ -1,0 +1,1398 @@
+header, section, footer, body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+small {
+  font-size: 10px;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+legend {
+  color: #000;
+}
+
+fieldset, img {
+  border: 0;
+}
+
+button, input, select, textarea {
+  font-size: 100%;
+}
+
+html {
+  font-size: 12px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+.flex_box {
+  display: flex;
+}
+
+.s-around {
+  justify-content: space-around;
+}
+
+.s-between {
+  justify-content: space-between;
+
+}
+
+.margin(...) {
+  margin: @arguments;
+}
+
+.padding(...) {
+  padding: @arguments;
+}
+
+.border-radius(...) {
+  border-radius: @arguments;
+}
+
+.border(@b-color:gainsboro) {
+  border: 1px solid @b-color;
+}
+
+.border-t {
+  border-top: 1px solid gainsboro;
+}
+
+.border-b {
+  border-bottom: 1px solid gainsboro;
+}
+
+.border-r {
+  border-right: 1px solid #fff;
+}
+
+.po-r {
+  position: relative;
+}
+
+.po-a {
+  position: absolute;
+}
+
+.pl_10 {
+  padding-left: 6vw;
+}
+
+.mb_2 {
+  margin-bottom: 2vw;
+}
+
+.collection.isRed .ivu-icon {
+  background: @btn-red;
+}
+
+.collection {
+  z-index: 22;
+  width: 7vw;
+  height: 7vw;
+  text-align: center;
+  line-height: 7vw;
+  background: #fff;
+  .border-radius(50%);
+  color: @btn-red;
+  font-size: 1.6rem;
+  right: 20px;
+  bottom: -2vw;
+  .ivu-icon {
+    display: block;
+    margin: 0 auto;
+    width: 1.4rem;
+  }
+}
+
+.isCollect {
+  display: none;
+}
+
+@btn-red: #FF2D55;
+@font-color: #999;
+//租房_精品房源
+#rent {
+  header {
+    align-items: center;
+    height: 11vh;
+    .flex_box;
+    background: #FD2C53;
+    .padding(2vh, 0);
+  }
+  .tab {
+    width: 33.3%;
+    p {
+      color: #fff;
+    }
+  }
+
+}
+
+#reserve {
+  #find_house {
+    overflow: hidden;
+    .margin(1vh);
+    .border-radius(8px);
+    .flex_box;
+    .border;
+    .more {
+      .padding(1.3vh, 0);
+      color: #666666;
+      flex-grow: 1;
+    }
+    input {
+      text-indent: 1rem;
+      flex-grow: 9;
+      border: 0;
+      outline: none;
+      background: #EDEDED;
+      color: #000;
+    }
+    .icon {
+      display: block;
+      line-height: 2.4rem;
+      text-align: center;
+      flex-grow: 2;
+      background: #ABABAB;
+      color: #fff;
+    }
+  }
+
+  #resource {
+    height:79vh;
+    display: block;
+    overflow: auto;
+
+  }
+
+  .house_img_price {
+    height: 48vw;
+    overflow: hidden;
+  }
+  .total_price {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding-left: 1.4vw;
+    left: 0;
+    bottom: 7vw;
+  }
+  .total_price span {
+    font-size: 1.6rem;
+  }
+  .house_mes, .location_area_facing, .house_img_price {
+    .margin(3vw 0);
+  }
+  .house_mes {
+    padding-left: 1vw;
+  }
+  .house_name {
+    color: #666666;
+  }
+  .house_state {
+    .border-radius(7px);
+    .padding(0.3vw 1.4vw);
+    color: #fff;
+    background: @btn-red;
+  }
+  .location_area_facing {
+    color: @font-color;
+  }
+}
+
+//详情页的头部
+#detail_header {
+  header {
+    .flex_box;
+    .padding(2vw, 1vw);
+    color: @font-color;
+  }
+  .tab {
+    flex-grow: 1;
+    border-right: 1px solid gainsboro;
+    .flex_box;
+    align-items: center;
+  }
+  .tab:last-child {
+    border-right: 0;
+  }
+  .room_num {
+    flex-grow: 2;
+  }
+
+  .room_state {
+    margin-right: 2vw;
+    line-height: 18px;
+    display: block;
+    width: 19px;
+    height: 18px;
+    .border-radius(50%);
+    background: #e2dede;
+    color: #fff;
+  }
+  .leave {
+    background: greenyellow;
+  }
+
+}
+
+//详情页的主要内容
+#room {
+  padding-bottom: 15vw;
+  .resource_item {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  #house_img {
+    overflow: hidden;
+    height: 29vh;
+
+    .img_item {
+      width: 100vw;
+      float: left;
+      img {
+        height: 210px;
+      }
+    }
+  }
+  #price {
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding-left: 1.4vw;
+    left: 0;
+    bottom: 7vw;
+  }
+  .price span {
+    font-size: 1.6rem;
+  }
+}
+
+#detail_room {
+  padding-bottom: 10vh;
+  color: #666666;
+
+  .house_name h1 {
+    .margin(2vw);
+    font-size: 1.2rem;
+    color: #000000;
+  }
+
+  .detail_mes {
+    margin-top: 3vh;
+  }
+  .detail_mes li {
+    .padding(2.3vw, 1vw);
+    .flex_box;
+    .border-t;
+  }
+  .banks span:last-child i, .shopping span:last-child i {
+    visibility: hidden;
+  }
+  h1 {
+    .margin(2.8vw);
+    font-size: 1.2rem;
+    color: #000000;
+  }
+  .support-icon {
+    .flex_box;
+    .border-t;
+    .padding(3vw, 1.2vw);
+    .icon {
+      display: block;
+      .border;
+      .border-radius(50%);
+      font-size: 2.5rem;
+      width: 9vw;
+      line-height: 10vw;
+      height: 9vw;
+    }
+  }
+  .supporting_img, .service_img {
+    height: 29vh;
+    overflow: hidden;
+  }
+  .service_icon {
+    .flex_box;
+    div {
+      width: 25vw;
+      height: 15vw;
+    }
+    .icon {
+      font-size: 2.5rem;
+    }
+  }
+
+}
+
+#map {
+  clear: both;
+  height: 55vw;
+  border-top: 1px solid #666666;
+  border-bottom: 1px solid #666666;
+  .margin(11vw, 0);
+}
+
+#interest {
+  h1 {
+    margin: 0;
+  }
+  .title {
+    margin: 1vw;
+    text-align: center;
+  }
+  .interest_item {
+    padding: 1vw 0;
+    display: flex;
+    color: #666666;
+    font-size: 10px;
+    font-family: '微软雅黑', serif;
+  }
+
+  .house_img, .house_mes {
+    width: 50%;
+    height: 30vw;
+    overflow: hidden;
+  }
+  .house_mes {
+    padding-left: 2vw;
+  }
+  #interest .house_name {
+
+    color: #000000;
+  }
+  .price {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #ea0050;
+  }
+  .interest_item:last-child {
+    border-bottom: 1px solid gainsboro;
+  }
+
+  .title {
+    text-align: center;
+  }
+  .interest_item {
+    display: flex;
+    color: #666666;
+    font-size: 10px;
+    font-family: '微软雅黑', serif;
+  }
+
+  .house_img, .house_mes {
+    width: 50%;
+    height: 30vw;
+    overflow: hidden;
+  }
+  .house_mes {
+    padding-left: 2vw;
+  }
+  #interest .house_name {
+    margin: 1vw 0;
+    color: #000000;
+  }
+  .price {
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #ea0050;
+  }
+  .interest_item:last-child {
+    border-bottom: 1px solid gainsboro;
+  }
+}
+
+//路由包租
+#user {
+  height: 45vw;
+
+  #avator_name {
+    width: 89vw;
+    left: 7vw;
+    top: 8vw;
+    color: #fff;
+  }
+  .avator {
+    .border-radius(50%);
+    overflow: hidden;
+    width: 22vw;
+    height: 22vw;
+    border: 5px solid #fff;
+    img {
+      height: 100%;
+    }
+  }
+  .name_id {
+    padding-left: 2vw;
+    flex-grow: 1;
+    > p {
+      font-size: 1.2rem;
+    }
+  }
+  .icon-username {
+    display: flex;
+    align-items: center;
+  }
+  .signature {
+    .margin(3vw 0 0 2vw);
+    letter-spacing: 3px;
+    a {
+      .flex_box;
+      color: #fff;
+    }
+  }
+}
+
+#fun_wrapper {
+  height: 74vh;
+  font-size: 1.2rem;
+}
+
+#function {
+  margin: 2vw 0;
+  font-family: '微软雅黑', serif;
+  .flex_box;
+  .f_item {
+    flex-grow: 1;
+    a {
+      color: #495060;
+    }
+    .icon {
+      font-size: 2.5rem;
+    }
+    p {
+      font-weight: bold;
+    }
+    .num {
+      color: @btn-red;
+    }
+  }
+}
+
+#person_setting, #modify {
+  header {
+    border-bottom: 1px solid gainsboro;
+    text-align: center;
+    position: relative;
+    padding: 2vw 0;
+  }
+  .back {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 20px;
+    margin: auto;
+    font-size: 1.4rem;
+    padding-left: 4vw;
+    color: black !important;
+  }
+  h1 {
+    font-weight: 400;
+    font-size: 1.3rem;
+    flex-grow: 4;
+  }
+  .user {
+    .padding(5vw 0);
+    border-bottom: 10px solid gainsboro;
+  }
+  .user-icon {
+    width: 24vw;
+    height: 30vw;
+    margin: 0 auto;
+    .icon {
+      left: 0;
+      top: 0;
+
+      width: 22vw;
+      height: 22vw;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+    .icon2 {
+      z-index: 22;
+      height: 100%;
+      #upload {
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .modify {
+      left: 0;
+      bottom: 0;
+    }
+  }
+  .detail-mes {
+    padding: 5vw;
+    p {
+      a{
+        color:#495060;
+      }
+      padding: 2vw 0;
+    }
+  }
+  .define {
+    display: inline-block;
+    width: 20vw;
+
+  }
+
+}
+
+#modify {
+  left: 0;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: #fff;
+  z-index: 455;
+  .modify-mes {
+    width: 80%;
+    margin: 4vw auto;
+    .padding(3vw 0);
+    .user-input {
+      width: 100%;
+      border: 0;
+      .border-b;
+      text-indent: 3rem;
+      outline: 0;
+    }
+    .ivu-btn-primary {
+      margin-top: 10vw;
+      display: block;
+      width: 100%;
+    }
+    .tips {
+      color: #9199a9;
+      text-align: center;
+      margin-top: 3vw;
+    }
+  }
+}
+
+//收益
+#income {
+  .ivu-tabs-nav .ivu-tabs-tab {
+    .padding(8px, 57px);
+  }
+  .ivu-tabs-bar {
+    margin-bottom: 0;
+  }
+}
+
+.function-list {
+  border-top: 3vw solid gainsboro;
+  .list-item {
+    .nu {
+      display: block;
+      width: 1vw;
+      color: #898f9c;
+      font-weight: normal;
+    }
+    .flex_box;
+    .padding(3vw 1vw);
+    align-items: center;
+    .ivu-icon {
+      padding: 0 2vw;
+    }
+    span {
+      flex-grow: 42;
+    }
+    .ivu-icon {
+      width: 12vw;
+    }
+    .ivu-switch {
+      flex-grow: 0.2;
+    }
+    .ivu-icon-ios-arrow-right {
+      text-align: right;
+    }
+
+  }
+}
+
+#login_out {
+  font-size: 1.6rem;
+  color: @font-color;
+  .border-radius(10px);
+  .border;
+  margin: 0 auto;
+  width: 90%;
+  display: block;
+  background: #fff;
+  .padding(1vw, 3vw);
+  &:active {
+    background: @btn-red;
+    color: #fff;
+  }
+}
+
+//消息路由
+#chat {
+  height: 90vh;
+  overflow: auto;
+
+  .ivu-tabs-nav .ivu-tabs-tab {
+    padding: 8px 19vw !important;
+    color: #b1a5a5;
+  }
+
+  .ivu-tabs-nav .ivu-tabs-tab:hover {
+    color: #FF2D55;
+  }
+  .ivu-tabs-nav .ivu-tabs-tab:active {
+    color: #FF2D55;
+  }
+
+  span.ivu-badge {
+    font-size: 10px;
+  }
+  .ivu-tabs-tabpane {
+    min-height: 83.5vh;
+
+    background: #eaeaea;
+  }
+  .ivu-tabs-bar {
+    margin-bottom: 0;
+  }
+}
+
+//注册登录
+#register, #login {
+  font-size: 1.2rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 4vw;
+  .identity-group {
+    padding: 4vw 0;
+
+  }
+  #owner, #renter {
+    margin-left: 2vw;
+  }
+  span {
+    padding: 0 2vw;
+
+  }
+  .form-group {
+    position: relative;
+    margin: 5vw;
+    .border-radius(5px);
+    background: #cccccc;
+  }
+  .form-control {
+    -webkit-box-shadow: 0 0 0 1000px #cccccc inset;
+    text-indent: 3rem;
+    background: #cccccc;
+    line-height: 14vw;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    outline: none;
+    border: 0;
+  }
+  #submit_btn {
+    text-indent: 0;
+    .border-radius(5px);
+    -webkit-box-shadow: 0 0 0 1000px @btn-red inset;
+    color: #fff;
+    .padding(0.4vw, 1vw);
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  #form_login [class^=icon], #register_form [class^=icon] {
+    font-size: 2rem;
+    width: 24px;
+    height: 30px;
+    left: 2vw;
+    top: 2vw;
+    color: #fff;
+    position: absolute;
+  }
+  #wrapper {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, .3);
+    position: fixed;
+    left: 0;
+    top: 0;
+    .flex_box;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .validate_mes {
+    margin-bottom: 18vw;
+    text-align: center;
+    width: 45vw;
+    height: 55vw;
+    padding: 3vw;
+    color: #fff;
+    background: #fd017c;
+  }
+  #confirm {
+    margin-top: 1vw;
+    font-size: 1.22rem;
+    font-weight: 400;
+  }
+  .content {
+    text-align: center;
+    padding-top: 15vw;
+    color: #ef102d;
+    background: #fff;
+    height: 45vw;
+  }
+}
+
+#login, #register {
+  width: 100%;
+  .padding(0 0 12vh 0);
+  .form-group .close {
+    display: block;
+    height: 29px;
+    bottom: 0;
+    margin: auto 0;
+    right: 8px;
+    top: 0;
+  }
+  #third_party {
+    .border-t;
+    margin-top: 12vw;
+    padding-top: 9vw;
+    .flex_box;
+    .icon {
+      font-size: 2.2rem;
+    }
+    .other {
+
+      top: -9px;
+      margin: 0 auto;
+      left:0;
+      right:0;
+      text-align: center;
+      width: 100vw;
+     span{
+       background: #fff;
+     }
+    }
+  }
+  #user {
+    width: 100%;
+    padding: 0;
+    background-position: -10px -20px;
+  }
+
+}
+
+.night {
+  background: #000;
+}
+
+//公用底部
+#footer {
+  box-shadow: -1px -1px 1px gainsboro;
+  z-index: 200;
+  height: 10vh;
+  .flex_box;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+
+  background: #fff;
+  p {
+    user-select: none;
+  }
+}
+
+.router {
+  width: 25%;
+  -webkit-tap-highlight-color: transparent;
+  a {
+    box-shadow: none!important;
+    display: block;
+    height: 100%;
+    user-select: none;
+    color: grey;
+
+
+  }
+  .router-link-active {
+    color: #2baee9;
+  }
+  .toRent .icon::before {
+    content: "\e66a";
+  }
+  .toChat .icon::before {
+    content: "\e613";
+  }
+  .toCommunity .icon::before {
+    content: "\e627";
+  }
+  .toCharter .icon::before {
+    content: "\e502";
+  }
+  .toRent.router-link-active .icon::before {
+    content: "\e623";
+  }
+  .toChat.router-link-active .icon::before {
+    content: "\e622";
+  }
+  .toCommunity.router-link-active .icon::before {
+    content: "\e6cd";
+  }
+  .toCharter.router-link-active .icon::before {
+    content: "\e63d";
+  }
+  .padding(1vh, 0);
+  .icon {
+    font-style: normal;
+    font-size: 1.8rem;
+  }
+
+}
+
+//社区
+#community {
+  .message {
+    flex-grow: 1;
+
+  }
+  .message i, .post i {
+
+    color: #776c6c;
+    font-size: 1.6rem;
+
+  }
+  .post a i {
+
+    font-size: 1.9rem;
+  }
+  > header {
+    transition: 1s;
+    .flex_box;
+    .margin(4vw auto);
+    width: 0;
+  }
+  header .ivu-icon {
+    font-size: 1.4rem;
+  }
+  .content {
+    padding-bottom: 10vh;
+  }
+
+  .search {
+    color: #484848;
+    height: 25px;
+    width: 25px;
+    z-index: 22;
+    right: 13vw;
+    top: 1vw;
+    line-height: 31px;
+    text-align: center;
+  }
+  .ivu-input-wrapper {
+
+    margin: 2vw auto;
+    display: block;
+  }
+  .ivu-input-icon-normal + .ivu-input {
+    text-indent: 2rem;
+  }
+
+  .ivu-tabs-nav .ivu-tabs-tab {
+    padding: 8px 16vw !important;
+  }
+  #toSearch {
+    font-size: 1.6rem;
+    position: absolute;
+    left: 20px;
+    top: 12px;
+  }
+  .small {
+    transition: 1s;
+    width: 0;
+    overflow: hidden;
+  }
+
+  .search-a {
+    flex-grow: 3;
+  }
+  #keyInput {
+    .border();
+    display: block;
+    width: 100%;
+    outline: 0;
+    text-indent: 2rem;
+    line-height: 2.4rem;
+    background: #eaeaea;
+    .border-radius(10px);
+  }
+  .post {
+    .flex_box;
+   text-align: right;
+    justify-content: flex-end;
+    align-items: center;
+    flex-grow: 1;
+  }
+}
+
+#search {
+  .search {
+    right: 5px;
+  }
+
+  .drop {
+    z-index: 22;
+    left: -11px;
+    top: 5px;
+  }
+
+  #header {
+    position: fixed;
+    left: 15%;
+    top: 2.3%;
+    width: 80vw;
+    .flex_box;
+    .ivu-icon {
+      font-size: 1.4rem;
+    }
+  }
+  .keyword {
+    flex-grow: 4;
+  }
+  .cancel {
+    .flex_box;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+}
+
+//发帖
+#post {
+  width: 100vw;
+  position: fixed;
+  height:100vh;
+  z-index: 464;
+  left: 0;
+  top: 0;
+  background: #fff;
+
+  header {
+    .flex_box;
+    .border-b;
+    align-items: center;
+    .back {
+      color: black !important;
+      flex-grow: 1;
+      text-align: center;
+    }
+    a {
+      text-align: center;
+      flex-grow: 1;
+    }
+    h1 {
+      text-align: center;
+      flex-grow: 4;
+      .padding(2vw);
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+
+  }
+
+  .upload {
+    margin-left: 3vw;
+    position: relative;
+    .border();
+    width: 20vw;
+    height: 20vw;
+    overflow: hidden;
+    text-align: center;
+    line-height: 20vw;
+    font-size: 4rem;
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 22;
+    }
+    .input-icon {
+      left: 0;
+      top: 0;
+      width: 100%;
+      position: absolute;
+      opacity: 0;
+      z-index: 545;
+      overflow: hidden;
+      input {
+        width: 20vw;
+      }
+    }
+    .ivu-icon {
+      width: 20vw;
+      height: 20vw;
+      line-height: 20vw;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+  }
+}
+
+//帖子详情
+#article {
+  width:100vw;
+  position: fixed;
+  left: 0;
+  background: #fff;
+  top: 0;
+  z-index: 333;
+  min-height: 100vh;
+  padding-bottom: 11vw;
+  .content{
+    padding-bottom:  11vw;
+    height: 94vh;
+    overflow: auto;
+  }
+  header {
+    z-index: 999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    .flex_box;
+    .border-b;
+    font-size: 1.4rem;
+    align-items: center;
+    .back {
+      color: black !important;
+      flex-grow: 1;
+      text-align: center;
+    }
+    h1 {
+      text-align: center;
+      flex-grow: 4;
+      .padding(2vw);
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+    .share {
+      padding-bottom: 10px;
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 3px;
+      flex-grow: 1;
+
+    }
+
+  }
+  .article {
+
+    .padding(10vh 3vw 3vw 3vw);
+    border-bottom: 10px solid gainsboro;
+  }
+  footer {
+
+    background: #fff;
+    padding-bottom: 1vw;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    height: 11vw;
+    width: 100%;
+    z-index: 444;
+    .flex_box;
+    .comment-word {
+      text-indent: 2rem;
+      outline: 0;
+      .margin(0 1vw);
+      flex-grow: 4;
+      .border();
+      .border-radius(8px);
+    }
+    .upload {
+      .border();
+      .border-radius(50%);
+      flex-grow: 2;
+      .file {
+        z-index: 22;
+        opacity: 0;
+        width: 30px;
+        height: 30px;
+      }
+      .file, .ivu-icon {
+        font-size: 2rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+      }
+    }
+    .send-btn {
+      flex-grow: 3;
+      .margin(0 1vw);
+      height: 100%;
+    }
+    .ivu-btn-primary {
+      position: absolute;
+      left: 0;
+      right: 0;
+      z-index: 55;
+      width: 100%;
+      height: 100%;
+    }
+
+  }
+  .float-img {
+    width: 10vw;
+    height: 10vw;
+    position: fixed;
+    overflow: hidden;
+    bottom: 9vh;
+    .border();
+    right: 4vw;
+
+  }
+}
+
+#latest, #article {
+  font-family: '微软雅黑', serif;
+  font-size: 1.2rem;
+
+  .latest-item {
+    display: block;
+    color: #3c3b3b;
+    border-top: 10px solid #eaeaea;
+    .padding(3vw);
+
+  }
+  .latest-title {
+    .flex_box;
+    .icon img{
+      height:100%;
+    }
+  }
+  .latest-word {
+    color: #6f6868;
+    max-height: 6rem;
+    padding: 0.5rem;
+    overflow: hidden;
+  }
+
+  .icon {
+    margin-right: 1rem;
+    .border-radius(50%);
+    overflow: hidden;
+    width: 15vw;
+    height: 15vw;
+  }
+  .user-mes {
+    .flex_box;
+    align-items: center;
+  }
+  .latest-img {
+    height: 52vw;
+    overflow: hidden;
+  }
+  .latest-bottom {
+    display: flex;
+    a {
+      font-size: 1.4rem;
+      margin-top: 2vw;
+      text-align: center;
+      display: block;
+      flex-grow: 1;
+    }
+  }
+}
+
+//loading加载
+#loading {
+  position: absolute;
+  top: 0;
+  width: 13vw;
+  height: 22vw;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+}
+
+//路由切换动态效果
+.animated {
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+
+@-webkit-keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes bounceInUp {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 3000px, 0);
+    transform: translate3d(0, 3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, -5px, 0);
+    transform: translate3d(0, -5px, 0);
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}

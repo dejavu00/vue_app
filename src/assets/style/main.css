@@ -1,0 +1,360 @@
+header,
+section,
+footer,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+small {
+  font-size: 10px;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset,
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+html {
+  font-size: 12px;
+}
+.text-center {
+  text-align: center;
+}
+img {
+  width: 100%;
+}
+.flex_box {
+  display: flex;
+}
+.s-around {
+  justify-content: space-around;
+}
+.s-between {
+  justify-content: space-between;
+}
+.border-t {
+  border-top: 1px solid gainsboro;
+}
+.border-b {
+  border-bottom: 1px solid gainsboro;
+}
+.border-r {
+  border-right: 1px solid #fff;
+}
+.po-r {
+  position: relative;
+}
+.po-a {
+  position: absolute;
+}
+.pl_10 {
+  padding-left: 6vw;
+}
+.mb_2 {
+  margin-bottom: 2vw;
+}
+#rent header {
+  height: 11vh;
+  display: flex;
+  background: #FD2C53;
+  padding: 2vh 0;
+}
+#rent .tab {
+  width: 33.3%;
+}
+#rent .tab p {
+  color: #fff;
+}
+#reserve #find_house {
+  overflow: hidden;
+  margin: 1vh;
+  border-radius: 8px;
+  display: flex;
+  border: 1px solid gainsboro;
+}
+#reserve #find_house .more {
+  padding: 1.3vh 0;
+  color: #666666;
+  flex-grow: 1;
+}
+#reserve #find_house input {
+  text-indent: 1rem;
+  flex-grow: 9;
+  border: 0;
+  outline: none;
+  background: #EDEDED;
+  color: #000;
+}
+#reserve #find_house .icon {
+  display: block;
+  line-height: 2.4rem;
+  text-align: center;
+  flex-grow: 1;
+  background: #ABABAB;
+  color: #fff;
+}
+#reserve #resource {
+  display: block;
+  overflow: auto;
+  padding-bottom: 12vh;
+}
+#reserve .house_img_price {
+  height: 48vw;
+  overflow: hidden;
+}
+#reserve .total_price {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding-left: 1.4vw;
+  left: 0;
+  bottom: 7vw;
+}
+#reserve .total_price span {
+  font-size: 1.6rem;
+}
+#reserve .house_mes,
+#reserve .location_area_facing,
+#reserve .house_img_price {
+  margin: 3vw 0;
+}
+#reserve .house_mes {
+  padding-left: 1vw;
+}
+#reserve .house_name {
+  color: #666666;
+}
+#reserve .house_state {
+  border-radius: 7px;
+  padding: 0.3vw 1.4vw;
+  color: #fff;
+  background: #FF2D55;
+}
+#reserve .location_area_facing {
+  color: #999;
+}
+#detail_header header {
+  display: flex;
+  padding: 2vw 1vw;
+  color: #999;
+}
+#detail_header .tab {
+  flex-grow: 1;
+  border-right: 1px solid gainsboro;
+  display: flex;
+  align-items: center;
+}
+#detail_header .tab:last-child {
+  border-right: 0;
+}
+#detail_header .room_num {
+  flex-grow: 2;
+}
+#detail_header .nickname {
+  font-size: 10px;
+}
+#detail_header .room_state {
+  margin-right: 2vw;
+  line-height: 18px;
+  display: block;
+  width: 19px;
+  height: 18px;
+  border-radius: 50%;
+  background: #e2dede;
+  color: #fff;
+}
+#detail_header .leave {
+  background: greenyellow;
+}
+#room .house_img {
+  overflow: hidden;
+  height: 29vh;
+}
+#room .price {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding-left: 1.4vw;
+  left: 0;
+  bottom: 7vw;
+}
+#room .price span {
+  font-size: 1.6rem;
+}
+#detail_room {
+  padding-bottom: 10vh;
+  color: #666666;
+  font-size: 10px;
+}
+#detail_room .house_name h1 {
+  margin: 2vw;
+  font-size: 1.2rem;
+  color: #000000;
+}
+#detail_room .detail_mes {
+  margin-top: 3vh;
+}
+#detail_room .detail_mes li {
+  padding: 2.3vw 1vw;
+  display: flex;
+  border-top: 1px solid gainsboro;
+}
+#detail_room .banks span:last-child i,
+#detail_room .shopping span:last-child i {
+  visibility: hidden;
+}
+#detail_room h1 {
+  margin: 2.8vw;
+  font-size: 1.2rem;
+  color: #000000;
+}
+#detail_room .support-icon {
+  display: flex;
+  border-top: 1px solid gainsboro;
+  padding: 3vw 0;
+}
+#detail_room .support-icon .icon {
+  display: block;
+  border: 1px solid gainsboro;
+  border-radius: 50%;
+  font-size: 2.5rem;
+  width: 9vw;
+  line-height: 9vw;
+  height: 9vw;
+}
+#detail_room .supporting_img,
+#detail_room .service_img {
+  height: 29vh;
+  overflow: hidden;
+}
+#detail_room .service_icon {
+  display: flex;
+}
+#detail_room .service_icon div {
+  width: 25vw;
+  height: 15vw;
+}
+#detail_room .service_icon .icon {
+  font-size: 2.5rem;
+}
+#detail_room #map {
+  clear: both;
+  height: 55vw;
+  border-top: 1px solid #666666;
+  border-bottom: 1px solid #666666;
+  margin: 11vw 0;
+}
+#user {
+  height: 45vw;
+  background: url('../img/user-bg.jpg') no-repeat;
+}
+#user #avator_name {
+  width: 39vw;
+  left: 10vw;
+  top: 12vw;
+  display: flex;
+  color: #fff;
+}
+#user .avator {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 18vw;
+  height: 18vw;
+  border: 5px solid #fff;
+}
+#user .name_id {
+  align-self: center;
+}
+#function {
+  margin-top: 5vw;
+  font-family: '微软雅黑', serif;
+  display: flex;
+}
+#function .f_item {
+  flex-grow: 1;
+}
+#function .f_item .icon {
+  font-size: 2.5rem;
+}
+#function .f_item p {
+  font-weight: bold;
+}
+#function .f_item .num {
+  color: #FF2D55;
+}
+#footer {
+  height: 10vh;
+  display: flex;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid gainsboro;
+  background: seagreen;
+}
+.router {
+  padding: 2vh 0;
+  text-align: center;
+  flex-basis: 25%;
+}
+.router a {
+  user-select: none;
+  color: #fff;
+}
+.router .router-link-active {
+  color: #000;
+}
+.router .icon {
+  font-size: 1.8rem;
+}
